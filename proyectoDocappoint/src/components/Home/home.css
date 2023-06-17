@@ -1,0 +1,15 @@
+.publicidad img{
+    width:300px;
+    height: 300px;
+    border-radius: 10px;
+
+  }    
+  .publicidad{
+     display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: space-evenly;
+    
+      gap: 30px;
+  }
+  
