@@ -8,7 +8,8 @@ const InicioSesion = () => {
     <div>
        <Header/>
 
-       <div>Inicio Sesion</div><Footer/>
+       <div>Inicio Sesion</div>
+       <Footer/>
     </div>
   )
 }
