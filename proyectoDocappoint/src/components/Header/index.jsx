@@ -7,16 +7,16 @@ const Header = () => {
        <header>
         <nav >
           <div className='logo'>  
-            <a href=" "><img src= {caduceo} alt="" />  <h2>Docappoint</h2></a>
+            <a href=" "><img src= {caduceo} alt=""  />  <h2>Docappoint</h2></a>
 
           </div>
            <br />
           <ul>
-            <li><a href="">Home</a>  </li>
+            {/* <li><a href="">Home</a>  </li>
             <li><a href="">Consulta Rapida</a> </li>
             <li><a href="">Especialidades</a> </li>
             <li><a href="">Registrarse</a> </li>
-            <li><a href=""> Inicio Sesion</a> </li>
+            <li><a href=""> Inicio Sesion</a> </li> */}
           </ul>
         </nav></header>  
  
@@ -26,8 +26,7 @@ const Header = () => {
         <h1>Encontra ya tu especialista!</h1>
        </section>
       <br />
-      <img src="fondoHeader.jpg" alt="" />s
-    </div>
+     </div>
   )
 }
 

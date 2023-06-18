@@ -12,6 +12,7 @@ import { Route, Routes } from 'react-router-dom'
 import db from '../db/firebase-config'
 import { collection, getDocs } from 'firebase/firestore'
 import ActionAreaCard from './components/ActionAreaCard'
+import DrawerAppBar from './components/Navbar'
  
 function App() {
   const [doctores, setDoctores] = useState([]);
@@ -30,18 +31,23 @@ function App() {
 
   return (
     <>
-   
+   <DrawerAppBar/>  
     <Routes>
-
-     <Route path="/" element={<Home doctores={doctores}/>} />  
+      
+     <Route path="/"element={<Home />}  />  
         {/* <Home/>  */}
-         
-       </Routes>
+        <Route path="/consultarapida" element={ <ConsultaRapida/>} />
+        <Route path="/especialidades" element={<Especialidades doctores={doctores}/>} />
+        <Route path="/iniciosesion" element={  <InicioSesion/> } />
+        <Route path="/registrarse"  element={  <Registrarse/> } />
+        <Route path='*' element={<h1> "404 Not Found"</h1>} />
+
+
        {/* <ConsultaRapida/>
        <Especialidades doctores={doctores}/>
        <InicioSesion/>
        <Registrarse/>   */}
-         
+         </Routes>
     
     </>
   )

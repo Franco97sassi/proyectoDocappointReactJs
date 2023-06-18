@@ -1,8 +1,15 @@
 import React from 'react'
+import Header from '../Header'
+import Footer from '../Footer'
 
 const InicioSesion = () => {
   return (
-    <div>InicioSesion</div>
+    
+    <div>
+       <Header/>
+
+       <div>Inicio Sesion</div><Footer/>
+    </div>
   )
 }
 

@@ -15,6 +15,7 @@ export default function ActionAreaCard({doctor}) {
           height="140"
           image={doctor.img}
           alt="green iguana"
+ 
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

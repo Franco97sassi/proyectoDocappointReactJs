@@ -6,7 +6,7 @@ const ConsultaRapida = () => {
   return (
     <div>
         <Header/>
-       <h1>aaaa</h1>
+       <h1>ConsultaRapida</h1>
         <Footer/>
     </div>
   )

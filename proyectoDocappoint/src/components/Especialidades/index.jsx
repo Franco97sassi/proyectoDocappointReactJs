@@ -7,7 +7,14 @@ const Especialidades = ({doctores}) => {
   return (
     <div>
          <Header/>
-        <ActionAreaCard/>
+         <h1>Especialidades</h1>
+         <section>
+          {doctores.map((doctor) => ( 
+            <ActionAreaCard key={doctor.id} doctor={doctor}/>
+          ))}
+        </section>
+
+        
         <Footer/>
     </div>
   )
