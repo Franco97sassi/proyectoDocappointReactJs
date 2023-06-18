@@ -3,7 +3,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea, Link } from '@mui/material';
+import { CardActionArea } from '@mui/material';
+// import card from './card.css'
 
 export default function ActionAreaCard({doctor}) {
   return (
@@ -24,9 +25,9 @@ export default function ActionAreaCard({doctor}) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <Link to={`/doctor/${doctor.id}`}>
+      {/* <Link to={`/doctor/${doctor.id}`}>
        < Button variant="contained"    >   Ver Doctor </Button>
-      </Link>
+      </Link> */}
     </Card>
   );
 }

@@ -8,6 +8,10 @@ import ConsultaRapida from './components/consultaRapida'
 import Especialidades from './components/Especialidades'
 import InicioSesion from './components/inicioSesion'
 import Registrarse from './components/Registrarse'
+import { Route, Routes } from 'react-router-dom'
+import db from '../db/firebase-config'
+import { collection, getDocs } from 'firebase/firestore'
+import ActionAreaCard from './components/ActionAreaCard'
  
 function App() {
   const [doctores, setDoctores] = useState([]);
@@ -26,15 +30,19 @@ function App() {
 
   return (
     <>
+   
     <Routes>
-      <Route path="/" element={<Home doctores={doctores}/>} />
-     
-       <Home/>
-       <ConsultaRapida/>
+
+     <Route path="/" element={<Home doctores={doctores}/>} />  
+        {/* <Home/>  */}
+         
+       </Routes>
+       {/* <ConsultaRapida/>
        <Especialidades doctores={doctores}/>
        <InicioSesion/>
-       <Registrarse/>
-       </Routes>
+       <Registrarse/>   */}
+         
+    
     </>
   )
 }
