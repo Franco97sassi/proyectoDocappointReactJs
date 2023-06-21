@@ -11,7 +11,7 @@ const Footer = () => {
             <p> Hermosillo,Sonora,Mexico</p>
         </section>
         <section> 
-        <img src={caduceo} alt=""/>  <h3>Doccapoint</h3>
+        <img src={caduceo} alt=""/>  <h3>Docappoint</h3>
         <p>Docappoint©2023-Encontrá tu especialista y pedí turno.</p>
          
     </section>

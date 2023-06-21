@@ -9,28 +9,28 @@ import './style.css';
 import { Link } from 'react-router-dom';
 function CollapsibleExample() {
   return (
-    <div  > 
-    <Navbar collapseOnSelect  expand="lg" className="bg-body-tertiary" bg="warning"  
-     >
-      <Container    className='color' bg="Info">
+    <div> 
+
+    <Navbar collapseOnSelect  expand="lg"   className='bg-primary'   
+      > 
+
+      <Container  className='bg-primary'  >
+
         {/* <Nav.Link href="#home">   */}
                     <Link to={`/`} style={{ textDecoration: "none", color: "inherit" }}> 
                     <div className='logo'>  
   <img src= {caduceo} alt=""   />  <h2>Docappoint</h2> </div>  </Link> 
-  {/* </Nav.Link> */}
-         <div className='logo'>  
-             
-
-          </div> 
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />  
-        <Navbar.Collapse id="responsive-navbar-nav">
-
-          <Nav className="me-auto container  "   > 
-            <Nav.Link href="#features"> 
+  {/* </Nav.Link> */}  
+          
+        <Navbar.Toggle aria-controls="responsive-navbar-nav"   />  
+        <Navbar.Collapse id="responsive-navbar-nav"   >
+ 
+          <Nav className="me-auto container  bg-primary" > 
+            <Nav.Link href="#features" >  
               <Link to={`/consulta`} style={{ textDecoration: "none", color: "inherit" }}> 
               Consulta Rapida</Link>
-               
               </Nav.Link>
+
              <NavDropdown title="Especialistas" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
               <Link to={`/especialidades`} style={{ textDecoration: "none", color: "inherit" }}> 
@@ -98,15 +98,11 @@ function CollapsibleExample() {
             </NavDropdown>
 
             </Nav>
-          {/* <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-          </Nav> */}
+        
         </Navbar.Collapse>
       </Container>
-    </Navbar>    </div> 
+    </Navbar>    
+    </div> 
   );
 }
 

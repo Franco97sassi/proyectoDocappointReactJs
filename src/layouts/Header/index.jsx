@@ -20,9 +20,9 @@ import CollapsibleExample from '../../components/navBar2'
             <li><a href=""> Inicio Sesion</a> </li> */}
           {/* </ul>
         </nav></header>   */}
-   
+     <div className='color'>  
         <CollapsibleExample    />
-
+        </div>
 
        <section className="imagenFondo">
         <h1>Encontra ya tu especialista!</h1>
