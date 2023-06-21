@@ -46,30 +46,32 @@
 //   })};
 const doctores =
 [
-  { id: 1, nombre: "Odontologo1", especialidad: "Odontólogo",img: "1.jpeg" ,sintoma:"caries,encias"},
-  { id: 2, nombre: "Odontologo2", especialidad: "Odontólogo",img: "odontologo2.jpeg" ,sintoma:"caries,encias"},
-  { id: 3, nombre: "Odontologo3", especialidad: "Odontólogo",img: "odontologo3.jpeg" ,sintoma:"caries,encias"},
-     { id: 2, nombre: "Doctor2", especialidad: "Cardiologo",img: "2.jpeg",sintoma: "corazon,pecho"},
-    { id: 3, nombre: "Doctor3", especialidad: "Infectologo",img: "3.jpeg",sintoma:"fiebre,garganta"  },
-    { id: 4, nombre: "Doctor4", especialidad:  "Otorrinolaringolo",img: "4.jpeg",sintoma:"oido,nariz,garganta,cabeza,cuello"  },
-    { id: 5, nombre: "Doctor5", especialidad: "Endocrinologo",img: "5.jpeg",sintoma:"obesidad,diabetes"},
+  { id: 1, nombre: "Odontologo1", especialidad: "Odontólogo",img: "./cardiologo1.jpeg" ,sintoma:"caries,dientes,encias"},
+  { id: 2, nombre: "Odontologo2", especialidad: "Odontólogo",img: "/cardiologo1.jpeg" ,sintoma:"caries,dientes,encias"},
+  { id: 3, nombre: "Odontologo3", especialidad: "Odontólogo",img: "/cardiologo1.jpeg" ,sintoma:"caries,dientes,encias"},
+     { id: 4, nombre: "Cardiologo1", especialidad: "Cardiologo",img: "/cardiologo1.jpeg",sintoma: "corazon,pecho"},
+    { id: 5, nombre: "Infectologo1", especialidad: "Infectologo",img: "/cardiologo1.jpeg",sintoma:"fiebre,garganta"  },
+    { id: 6, nombre: "Otorrinolaringolo1", especialidad:  "Otorrinolaringolo",img: "/cardiologo1.jpeg",sintoma:"oido,nariz,garganta,cabeza,cuello"  },
+    { id: 7, nombre: "Endocrinologo1", especialidad: "Endocrinologo",img: "/cardiologo1.jpeg",sintoma:"obesidad,diabetes"},
    
 ]
  
   function crearHTML2(doctores) {
-    const contenedor2 = document.querySelector("#contenedor2");
+    // const contenedor2 = document.querySelector("#contenedor2");
     let html1;
     contenedor2.innerHTML = "";
     for (const doctor of doctores) {
-      html1 = ` <tr><td> <img src="./img/${doctor.img}"/> </img></td>
-             
+      html1 = ` <tr>
+              
            <td>${doctor.id}</td>
             
-              <td>  ${doctor.nombre}   </td>
-              <td> ${doctor.especialidad}</td>
+              <td>     ${doctor.nombre}    </td> 
+              <td> ${doctor.especialidad}</td> 
         </tr>`
       contenedor2.innerHTML += html1; 
     }
+    // <td> <img src="./${doctor.img}"/> </img></td>
+
     // tbody.innerHTML += html
   
   }

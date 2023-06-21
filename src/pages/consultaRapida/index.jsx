@@ -26,11 +26,13 @@ const Consulta  = ({doctores}) => {
               </div>
             {/* <input type="text" id="consulta"  >  */}
             <table id="tabla">
-                <th>Imagen</th> 
-                <th>ID</th>
+                {/* <th>Imagen</th>  */}
+                <thead>   <tr> 
+                <th>ID</th>   
                 <th>Nombre</th>
                 <th>Especialidad</th>
-         
+                </tr>
+                </thead>
                 <tbody id="contenedor2"></tbody> 
             </table>
         </section>
