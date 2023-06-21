@@ -1,0 +1,12 @@
+ .container{
+    background-color: rgb(255, 255, 255);
+ ;
+} 
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left :400px;
+}
+ 

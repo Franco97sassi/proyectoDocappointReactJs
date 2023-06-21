@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
          <footer>  
         <section>
-        <h2>Contacto</h2>
+        <h3>Contacto</h3>
             <p>Direccion:...</p>
             <p> Hermosillo,Sonora,Mexico</p>
         </section>

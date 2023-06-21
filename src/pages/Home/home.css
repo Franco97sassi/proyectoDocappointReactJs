@@ -12,4 +12,8 @@
     
       gap: 30px;
   }
+  img .fondo{
+    width: max-content;
+    height: 100vh;
+  }
   

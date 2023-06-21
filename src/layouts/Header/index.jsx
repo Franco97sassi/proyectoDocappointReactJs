@@ -1,30 +1,32 @@
 import React from 'react'
 import './header.css'
 import caduceo from "../../assets/imgs/caduceo.png"
-const Header = () => {
+import CollapsibleExample from '../../components/navBar2'
+ const Header = () => {
   return (
     <div>
-       <header>
+       {/* <header>
         <nav >
           <div className='logo'>  
-            <a href=" "><img src= {caduceo} alt=""  />  <h2>Docappoint</h2></a>
+            <a href=" "><img src= {caduceo} alt=""   />  <h2>Docappoint</h2></a>
 
           </div>
            <br />
-          <ul>
+          <ul> */}
             {/* <li><a href="">Home</a>  </li>
             <li><a href="">Consulta Rapida</a> </li>
             <li><a href="">Especialidades</a> </li>
             <li><a href="">Registrarse</a> </li>
             <li><a href=""> Inicio Sesion</a> </li> */}
-          </ul>
-        </nav></header>  
- 
-  
+          {/* </ul>
+        </nav></header>   */}
+   
+        <CollapsibleExample    />
 
-      <section className="imagenFondo">
+
+       <section className="imagenFondo">
         <h1>Encontra ya tu especialista!</h1>
-       </section>
+       </section>  
       <br />
      </div>
   )
