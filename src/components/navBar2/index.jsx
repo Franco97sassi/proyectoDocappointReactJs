@@ -32,54 +32,65 @@ function CollapsibleExample() {
               </Nav.Link>
 
              <NavDropdown title="Especialistas" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">
-              <Link to={`/especialidades`} style={{ textDecoration: "none", color: "inherit" }}> 
+              <NavDropdown.Item href=" ">
+              <Link to={`/especialidades/`} style={{ textDecoration: "none", color: "inherit" }}> 
               Odontologos
               </Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-              <Link to={`/cardiologos`} style={{ textDecoration: "none", color: "inherit" }}> 
+              <Link to={`/especialidades/cardiologos`} style={{ textDecoration: "none", color: "inherit" }}> 
               Cardiologos
               </Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">
-              <Link to={`/infectologos`} style={{ textDecoration: "none", color: "inherit" }}> 
+              <Link to={`/especialidades/infectologos`} style={{ textDecoration: "none", color: "inherit" }}> 
               Infectologos
               </Link>
               </NavDropdown.Item>
               {/* <NavDropdown.Divider /> */}
               <NavDropdown.Item href="#action/3.4">
-              <Link to={`/etorrinolaringolos`} style={{ textDecoration: "none", color: "inherit" }}> 
+              <Link to={`/especialidades/etorrinolaringolos`} style={{ textDecoration: "none", color: "inherit" }}> 
               Otorrinolaringolos
               </Link>
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">
-              <Link to={`/endocrinologos`} style={{ textDecoration: "none", color: "inherit" }}> 
+              <Link to={`/especialidades/endocrinologos`} style={{ textDecoration: "none", color: "inherit" }}> 
               Endocrinologos
               </Link>
               </NavDropdown.Item>
             </NavDropdown>
-           
- 
-            <NavDropdown title="Registrarse" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">
-              <Link to={`/registrarse`} style={{ textDecoration: "none", color: "inherit" }}> 
-              Como Paciente
-              </Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-              <Link to={`/registrarse`} style={{ textDecoration: "none", color: "inherit" }}> 
-              Como Especialista
-              </Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-              <Link to={`/registrarse`} style={{ textDecoration: "none", color: "inherit" }}> 
-              Como Laboratorio
-              </Link>
-              </NavDropdown.Item>
-            </NavDropdown>
 
-            <NavDropdown title="Inicio Sesion" id="collasible-nav-dropdown">
+            <Nav.Link href="#features" > 
+            <Link to={`/registrarse`} style={{ textDecoration: "none", color: "inherit" }}> 
+              Registrarse
+              </Link>
+              </Nav.Link>
+
+              <Nav.Link href="#features" > 
+
+              <Link to={`/iniciosesion`} style={{ textDecoration: "none", color: "inherit" }}> 
+              Inicio Sesion
+              </Link>  </Nav.Link>
+
+            {/* <NavDropdown title="Registrarse" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">
+              <Link to={`/registrarse`} style={{ textDecoration: "none", color: "inherit" }}> 
+              Como Paciente
+              </Link>
+              </NavDropdown.Item> */}
+              {/* <NavDropdown.Item href="#action/3.2">
+              <Link to={`/registrarse`} style={{ textDecoration: "none", color: "inherit" }}> 
+              Como Especialista
+              </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+              <Link to={`/registrarse`} style={{ textDecoration: "none", color: "inherit" }}> 
+              Como Laboratorio
+              </Link>
+              </NavDropdown.Item> */}
+            {/* </NavDropdown> */}
+
+            {/* <NavDropdown title="Inicio Sesion" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
               <Link to={`/iniciosesion`} style={{ textDecoration: "none", color: "inherit" }}> 
               Como Paciente
@@ -95,7 +106,7 @@ function CollapsibleExample() {
               Como Laboratorio
               </Link>
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
 
             </Nav>
         

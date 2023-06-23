@@ -12,8 +12,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-function Copyright(props) {
+import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+ function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
        
@@ -38,7 +38,13 @@ export default function SignUp() {
       password: data.get('password'),
     });
   };
+  const [age, setAge] = React.useState('');
 
+  const handleChange = (event) => {
+    setAge(event.target.value );
+  };
+
+  
   return (
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
@@ -77,7 +83,22 @@ export default function SignUp() {
               type="password"
               id="password"
               autoComplete="current-password"
+
             />
+           <FormControl fullWidth>
+  <InputLabel id="demo-simple-select-label">Tipo</InputLabel>
+  <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    value={age}
+    label="Age"
+    onChange={handleChange}
+  >
+    <MenuItem value={"Paciente"}>Paciente</MenuItem>
+    <MenuItem value={"Laboratorio"}>Laboratorio</MenuItem>
+    <MenuItem value={"Especialista"}>Especialista</MenuItem>
+  </Select>
+</FormControl>
             
             <Button
               type="submit"

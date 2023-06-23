@@ -13,7 +13,7 @@ import { DateTime } from "luxon";
 
  import "./card.css"
 // import "./main.js"
-export default function ActionAreaCard({ doctor }) {
+export default function ActionAreaCardSesion({ doctor }) {
   const [value, setValue] =React.useState(5);
   return (
     <div className='container'>

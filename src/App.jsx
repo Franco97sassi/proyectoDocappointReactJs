@@ -28,20 +28,23 @@ function App() {
     getDoctores();
   }, []);
 
+  const categorias = doctores.map((doctor) => doctor.especialidad)
 
 
   return (
     <>
    {/* <DrawerAppBar/>   */}
    {/* <CollapsibleExample/> */}
-   <Header/>
+   <Header   />
+ 
     <Routes>
       
-      
+        
      <Route path="/"element={<Home />}  />  
         {/* <Home/>  */}
         <Route path="/consulta" element={ <Consulta  doctores={doctores}/>} />
         <Route path="/especialidades" element={<Especialidades doctores={doctores}/>} />
+        <Route path="/especialidad" element={<Especialidades doctores={doctores}/>} />
         <Route path="/iniciosesion" element={ <InicioSesion/> } />
         <Route path="/registrarse"  element={<Registrarse/> } />
         <Route path="/sesion"  element={<Sesion/> } />
@@ -55,7 +58,7 @@ function App() {
        <Registrarse/>   */}
          </Routes>
          <Footer/>
-    
+         
     </>
   )
 }

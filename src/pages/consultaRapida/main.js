@@ -47,48 +47,48 @@
 const doctores =
 [
   { id: 1, nombre: "Odontologo1", especialidad: "Odontólogo",img: "./cardiologo1.jpeg" ,sintoma:"caries,dientes,encias"},
-  { id: 2, nombre: "Odontologo2", especialidad: "Odontólogo",img: "/cardiologo1.jpeg" ,sintoma:"caries,dientes,encias"},
-  { id: 3, nombre: "Odontologo3", especialidad: "Odontólogo",img: "/cardiologo1.jpeg" ,sintoma:"caries,dientes,encias"},
-     { id: 4, nombre: "Cardiologo1", especialidad: "Cardiologo",img: "/cardiologo1.jpeg",sintoma: "corazon,pecho"},
-    { id: 5, nombre: "Infectologo1", especialidad: "Infectologo",img: "/cardiologo1.jpeg",sintoma:"fiebre,garganta"  },
-    { id: 6, nombre: "Otorrinolaringolo1", especialidad:  "Otorrinolaringolo",img: "/cardiologo1.jpeg",sintoma:"oido,nariz,garganta,cabeza,cuello"  },
-    { id: 7, nombre: "Endocrinologo1", especialidad: "Endocrinologo",img: "/cardiologo1.jpeg",sintoma:"obesidad,diabetes"},
+  { id: 2, nombre: "Odontologo2", especialidad: "Odontólogo",img: "./cardiologo1.jpeg" ,sintoma:"caries,dientes,encias"},
+  { id: 3, nombre: "Odontologo3", especialidad: "Odontólogo",img: "./cardiologo1.jpeg" ,sintoma:"caries,dientes,encias"},
+     { id: 4, nombre: "Cardiologo1", especialidad: "Cardiologo",img: "./cardiologo1.jpeg",sintoma: "corazon,pecho"},
+    { id: 5, nombre: "Infectologo1", especialidad: "Infectologo",img: "./cardiologo1.jpeg",sintoma:"fiebre,garganta"  },
+    { id: 6, nombre: "Otorrinolaringolo1", especialidad:  "Otorrinolaringolo",img: "./cardiologo1.jpeg",sintoma:"oido,nariz,garganta,cabeza,cuello"  },
+    { id: 7, nombre: "Endocrinologo1", especialidad: "Endocrinologo",img: "./cardiologo1.jpeg",sintoma:"obesidad,diabetes"},
    
 ]
- 
-  function crearHTML2(doctores) {
-    // const contenedor2 = document.querySelector("#contenedor2");
-    let html1;
-    contenedor2.innerHTML = "";
-    for (const doctor of doctores) {
-      html1 = ` <tr>
-              
-           <td>${doctor.id}</td>
+const contenedor2 = document.querySelector("#contenedor2");
+
+function crearHTML2(doctores) {
+   
+  contenedor2.innerHTML = "";
+  let html1="";
+  for (const doctor of doctores) {
+    html1 = ` <tr>
             
-              <td>     ${doctor.nombre}    </td> 
-              <td> ${doctor.especialidad}</td> 
-        </tr>`
-      contenedor2.innerHTML += html1; 
-    }
-    // <td> <img src="./${doctor.img}"/> </img></td>
-
-    // tbody.innerHTML += html
-  
+         <td>${doctor.id}</td>
+          
+            <td>     ${doctor.nombre}    </td> 
+            <td> ${doctor.especialidad}</td> 
+      </tr>`
+    contenedor2.innerHTML += html1; 
   }
+  // <td> <img src="./${doctor.img}"/> </img></td>
+
+  // tbody.innerHTML += html
+
+}
 
 
-function filtrar2(filtro) {
-    let filtrado= doctores.filter((el) => {
-      return el.sintoma.includes(filtro);
-    } )
-    return filtrado;}
-
+function filtrar2(arr,filtro,param) {
+     return arr.filter((el) => {
+      return el[`${param}`].includes(filtro);
+} )}
+ 
 const consulta = document.querySelector("#consulta");
 if(consulta){  
 consulta.addEventListener("input", () => {
-  let nuevoFiltro = filtrar2(consulta.value) 
+  let nuevoFiltro = filtrar2(doctores,consulta.value,"sintoma") 
   crearHTML2(nuevoFiltro);
-  })};
+  })}; 
 
 
 
