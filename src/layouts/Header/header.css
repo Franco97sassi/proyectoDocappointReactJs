@@ -39,6 +39,7 @@
       width: 100vw;
     background-position: center;
     box-sizing: border-box ;
+    margin-top: -25px;
  }
 .logo a{
    display: flex;

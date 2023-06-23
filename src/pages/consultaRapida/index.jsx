@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Table from 'react-bootstrap/Table';
+import Header from "../../layouts/Header/index"
 
 import "./consultaRapida.css"
 import "./main.js"
+import BackgroundImage from '../../layouts/Header/backgroundImage';
 const Consulta  = ({doctores}) => {
-
+ 
       //  const filtrar2 = (arr, filtro, param) => {
       //   return arr.filter((el) => {
       //     return el[`${param}`].includes(filtro);
@@ -54,14 +56,20 @@ const Consulta  = ({doctores}) => {
 
   
  
-
+  const [ search, setSearch ] = useState("")
+  const searcher = (e) => {
+    setSearch(e.target.value)   
+}
+  const results = !search ? doctores : doctores.filter((dato)=> dato.sintoma.toLowerCase().includes(search.toLocaleLowerCase()))
+  
 
 
 
 
   return (
     <div>
-     
+       
+ <Header/>
         <main className='cDoctor'>  
        <h1>ConsultaRapida</h1>
        <section className="consultaDoctor"> 
@@ -73,24 +81,14 @@ const Consulta  = ({doctores}) => {
     
         </section>
          
-        <section  className='s' >
+        {/* <section  className='s' >
             
             <label   > <h2>   Seleccione que sintomas   tienes o donde sientes dolores </h2></label>
             <div >
                 <span   id="inputGroup-sizing-default">Buscar</span>
                 <input type="text"   aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="consulta"/> 
               </div>
-            {/* <input type="text" id="consulta"  >  */}
-            {/* <table id="tabla"> */}
-                {/* <th>Imagen</th>  */}
-                {/* <thead>   <tr> 
-                <th>ID</th>   
-                <th>Nombre</th>
-                <th>Especialidad</th>
-                </tr>
-                </thead>
-                <tbody id="contenedor2"></tbody> 
-            </table> */}
+            
             <table id="tabla">  
               <thead> 
                 <tr> 
@@ -100,7 +98,27 @@ const Consulta  = ({doctores}) => {
                </tr></thead>
               <tbody id="contenedor2"></tbody> 
             </table>
-        </section>
+        </section> */}
+          <div>
+          <label   > <h2>   Seleccione que sintomas   tienes o donde sientes dolores </h2></label>
+        <input value={search} onChange={searcher} type="text" placeholder='Buscar' className='form-control'/>
+        <table className='table table-striped table-hover mt-5 shadow-lg'>
+            <thead>
+                <tr className='bg-curso text-white'>
+                    <th>Nombre</th>
+                    <th>Especialidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                { results.map( (doctor) => (
+                    <tr key={doctor.id}>
+                        <td>{doctor.nombre}</td>
+                        <td>{doctor.especialidad}</td>
+                    </tr>                    
+                ))}
+            </tbody>
+        </table>
+    </div>
 
 
             </main>

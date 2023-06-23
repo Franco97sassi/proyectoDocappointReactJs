@@ -24,9 +24,7 @@ import CollapsibleExample from '../../components/navBar2'
         <CollapsibleExample    />
         </div>
 
-       <section className="imagenFondo">
-        <h1>Encontra ya tu especialista!</h1>
-       </section>  
+         
       <br />
      </div>
   )
